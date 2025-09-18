@@ -2,29 +2,38 @@
 
 import { useState } from "react";
 import { NavLink } from "../atoms/NavLink";
+import Image from "next/image";
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
 
   return (
-    <nav className="relative bg-purple-950/60 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+    <nav className="relative bg-purple-900/70 dark:bg-purple-900 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
       <div className="px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* ------------------ 👇 Menú escritorio (links visibles en pantallas grandes) ------------------ */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <img
-                src="https://www.google.com/imgres?q=gif%20de%20lenguajes%20de%20programacion%20icono%20uso%20libre&imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fanimation%2F2022%2F10%2F06%2F20%2F16%2F20-16-26-858__340.png&imgrefurl=https%3A%2F%2Fpixabay.com%2Fes%2Fgifs%2Fsearch%2Fprogramming%2520languages%2F&docid=tAQwEDsJ2utk9M&tbnid=pepTG-KieyhueM&vet=12ahUKEwiO-4Cc-tqPAxXMTTABHVKUDqAQM3oECH8QAA..i&w=340&h=340&hcb=2&itg=1&ved=2ahUKEwiO-4Cc-tqPAxXMTTABHVKUDqAQM3oECH8QAA"
-                alt="Your Company"
-                className="h-8 w-auto"
+              <Image
+                src="/imagenes/logo.webp"
+                alt="Foto de perfil"
+                width={32}
+                height={32}
+                className="object-cover w-full h-full"
               />
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-                <NavLink href="/">Home</NavLink>
-                <NavLink href="/about">About</NavLink>
-                <NavLink href="/contact">Contact</NavLink>
+                <NavLink href="/">
+                  <p className="text-white">Home</p>
+                </NavLink>
+                <NavLink href="/about">
+                  <p className="text-white">Conocimientos</p>
+                </NavLink>
+                <NavLink href="/contact">
+                  <p className="text-white">Redes</p>
+                </NavLink>
               </div>
             </div>
           </div>
