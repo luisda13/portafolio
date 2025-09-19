@@ -3,28 +3,28 @@
 
 :root {
   /* Paleta de colores para el Modo Claro */
-  --background: #E0E0E0;
+  --background: #e0e0e0;
   --foreground: #333333;
-  --primary: #5B3A67;
-  --primary-foreground: #FFFFFF;
-  --secondary: #B49CDD;
+  --primary: #5b3a67;
+  --primary-foreground: #ffffff;
+  --secondary: #b49cdd;
   --secondary-foreground: #333333;
-  --card: #FFFFFF;
+  --card: #ffffff;
   --card-foreground: #333333;
-  --border: #B49CDD;
+  --border: #b49cdd;
 }
 
 .dark {
   /* Paleta de colores para el Modo Oscuro */
-  --background: #1A1A1A;
-  --foreground: #E0E0E0;
+  --background: #1a1a1a;
+  --foreground: #e0e0e0;
   --primary: #311d38; /* Morado claro para mejor contraste */
-  --primary-foreground: #1A1A1A;
-  --secondary: #B49CDD;
-  --secondary-foreground: #1A1A1A;
-  --card: #2C2C2C;
-  --card-foreground: #E0E0E0;
-  --border: #9B7CD4;
+  --primary-foreground: #1a1a1a;
+  --secondary: #b49cdd;
+  --secondary-foreground: #1a1a1a;
+  --card: #2c2c2c;
+  --card-foreground: #e0e0e0;
+  --border: #9b7cd4;
 }
 
 @theme inline {
@@ -133,4 +133,56 @@ body {
 
 .animate-fadeInUp {
   animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Animación fade-in desde arriba */
+.fade-down {
+  opacity: 0;
+  transform: translateY(-1.5rem); /* -translate-y-6 */
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+}
+
+.fade-down.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* (Opcional) si quieres manejar delays con clases */
+.fade-delay-1 {
+  transition-delay: 80ms;
+}
+.fade-delay-2 {
+  transition-delay: 160ms;
+}
+.fade-delay-3 {
+  transition-delay: 240ms;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
 }

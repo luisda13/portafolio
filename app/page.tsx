@@ -4,6 +4,7 @@ import CardAboud from "@/app/componentes/moleculas/Card_Aboud";
 import Introducion from "@/app/componentes/organismos/Introducion";
 import BotonModeDark from "@/app/componentes/atoms/BotonModeDark";
 import Footer from "@/app/componentes/organismos/Footer";
+import Timeline from "./componentes/moleculas/Timeline";
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutIndex />
       <Introducion />
       <CardAboud />
+      <Timeline />
       <Footer />
     </main>
   );

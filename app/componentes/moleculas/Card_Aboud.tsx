@@ -22,22 +22,25 @@ const cards = [
 
 export default function AboutCards() {
   return (
-
-      <section id="about" className="section-height bg-[var(--primary)] py-10">
+    <section
+      id="about"
+      className="section-height bg-fixed bg-center bg-cover py-10"
+      style={{ backgroundImage: "url('/imagenes/fondo.jpg')" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="p-8 bg-white rounded-xl shadow-sm">
-      <h2 className="text-3xl font-bold text-center mb-8">Lo que hago</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {cards.map((card, index) => (
-          <Card
-            key={index}
-            title={card.title}
-            description={card.description}
-            image={card.image}
-          />
-        ))}
-      </div>
-      </div>
+        <div className="p-8 bg-white/40 backdrop-blur-md rounded-xl shadow-sm">
+          <h2 className="text-3xl font-bold text-center mb-8">Lo que hago</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cards.map((card, index) => (
+              <Card
+                key={index}
+                title={card.title}
+                description={card.description}
+                image={card.image}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
