@@ -6,23 +6,26 @@ const cards = [
   {
     title: "Desarrollo Web",
     description: "Construcción de aplicaciones modernas y responsivas.",
-    image: "/web.jpg",
+    image: "/imagenes/paguians.webp",
   },
   {
     title: "Inteligencia Artificial",
     description: "Modelos de IA aplicados a problemas del mundo real.",
-    image: "/ai.jpg",
+    image: "/imagenes/paguians.webp",
   },
   {
-    title: "Diseño UI/UX",
+    title: "Desarrollo de videjuegos",
     description: "Experiencias centradas en el usuario con interfaces limpias.",
-    image: "/design.jpg",
+    image: "/imagenes/paguians.webp",
   },
 ];
 
 export default function AboutCards() {
   return (
-    <section className="p-8 bg-white rounded-xl shadow-sm">
+
+      <section id="about" className="section-height bg-[var(--primary)] py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="p-8 bg-white rounded-xl shadow-sm">
       <h2 className="text-3xl font-bold text-center mb-8">Lo que hago</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {cards.map((card, index) => (
@@ -33,6 +36,8 @@ export default function AboutCards() {
             image={card.image}
           />
         ))}
+      </div>
+      </div>
       </div>
     </section>
   );

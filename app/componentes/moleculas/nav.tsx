@@ -9,20 +9,12 @@ function App() {
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
 
   return (
-    <nav className="relative bg-purple-900/70 dark:bg-purple-900 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+    <nav className="relative bg-[var(--primary)] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10 dark:after:bg-yellow-300/10">
       <div className="px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* ------------------ 👇 Menú escritorio (links visibles en pantallas grandes) ------------------ */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex shrink-0 items-center">
-              <Image
-                src="/imagenes/logo.webp"
-                alt="Foto de perfil"
-                width={32}
-                height={32}
-                className="object-cover w-full h-full"
-              />
-            </div>
+
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 <NavLink href="/">
@@ -95,11 +87,16 @@ function App() {
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Open user menu</span>
-                  <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                    className="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10"
-                  />
+            <div className="flex shrink-0 items-center">
+              <Image
+                src="/imagenes/logo.png"
+                alt="Foto de perfil"
+                width={32}
+                height={32}
+                className="object-cover w-full h-ful"
+              />
+
+            </div>
                 </button>
               </div>
 

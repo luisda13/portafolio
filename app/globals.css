@@ -2,8 +2,29 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.3 0 0);
+  /* Paleta de colores para el Modo Claro */
+  --background: #E0E0E0;
+  --foreground: #333333;
+  --primary: #5B3A67;
+  --primary-foreground: #FFFFFF;
+  --secondary: #B49CDD;
+  --secondary-foreground: #333333;
+  --card: #FFFFFF;
+  --card-foreground: #333333;
+  --border: #B49CDD;
+}
+
+.dark {
+  /* Paleta de colores para el Modo Oscuro */
+  --background: #1A1A1A;
+  --foreground: #E0E0E0;
+  --primary: #311d38; /* Morado claro para mejor contraste */
+  --primary-foreground: #1A1A1A;
+  --secondary: #B49CDD;
+  --secondary-foreground: #1A1A1A;
+  --card: #2C2C2C;
+  --card-foreground: #E0E0E0;
+  --border: #9B7CD4;
 }
 
 @theme inline {
@@ -97,4 +118,19 @@ body {
 
 .slide-right.visible {
   animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
 }

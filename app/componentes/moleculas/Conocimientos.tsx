@@ -92,7 +92,7 @@ export default function Conocimientos({ onSelect }: Props) {
   const [selecBoton, setSelecBoton] = useState(-1);
 
   return (
-    <section className="p-8 bg-gray-100 rounded-2xl shadow-md w-auto">
+    <section className="p-8 bg-[var(--card)] rounded-2xl shadow-md w-auto">
       <h2 className="text-3xl font-bold text-center mb-6">Mis conocimientos</h2>
       <div className="grid grid-cols-4 gap-3 justify-items-center">
         {conocimientos.map((item, index) => (
@@ -103,9 +103,9 @@ export default function Conocimientos({ onSelect }: Props) {
                 onSelect(item);
                 setSelecBoton(index);
               }}
-              className={`relative w-14 h-14 flex items-center justify-center bg-white rounded-xl border-2 shadow-sm overflow-hidden 
+              className={`relative w-14 h-14 flex items-center justify-center bg-[var(--secondary)] rounded-xl border-2 shadow-sm overflow-hidden 
                 
-                ${selecBoton == index ? "border-blue-600" : ""} 
+                ${selecBoton == index ? "border-[var(--border)]" : ""} 
 
               `}
             >
