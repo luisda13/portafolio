@@ -11,7 +11,8 @@
   --secondary-foreground: #333333;
   --card: #ffffff;
   --card-foreground: #333333;
-  --border: #b49cdd;
+  --border: #a07ae2;
+  --bottom: #330e74;
 }
 
 .dark {
@@ -24,7 +25,8 @@
   --secondary-foreground: #1a1a1a;
   --card: #2c2c2c;
   --card-foreground: #e0e0e0;
-  --border: #9b7cd4;
+  --border: #492d7e;
+  --bottom: #9875d8;
 }
 
 @theme inline {

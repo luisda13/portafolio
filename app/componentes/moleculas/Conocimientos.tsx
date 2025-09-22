@@ -110,12 +110,12 @@ export default function Conocimientos({ onSelect }: Props) {
               `}
             >
               {/* fondo animado */}
-              <span className="absolute inset-0 bg-blue-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+              <span className="absolute inset-0 bg-[var(--primary)] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
 
               {/* contenido encima */}
               <item.icon
                 size={24}
-                className="relative text-gray-700 group-hover:text-white transition-colors duration-300"
+                className="relative text-[var(--card-foreground)] group-hover:text-[var(--primary-foreground)] transition-colors duration-300"
               />
             </button>
             {/* Texto  */}

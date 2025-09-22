@@ -6,16 +6,16 @@ import { Sun, Moon } from "lucide-react";
 export default function ThemeToggle() {
   const [theme, setTheme] = useState("light");
 
-useEffect(() => {
-  const htmlElement = document.querySelector("html");
-  if (htmlElement) {
-    if (theme === "dark") {
-      htmlElement.classList.add("dark");
-    } else {
-      htmlElement.classList.remove("dark");
+  useEffect(() => {
+    const htmlElement = document.querySelector("html");
+    if (htmlElement) {
+      if (theme === "dark") {
+        htmlElement.classList.add("dark");
+      } else {
+        htmlElement.classList.remove("dark");
+      }
     }
-  }
-}, [theme]);
+  }, [theme]);
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));

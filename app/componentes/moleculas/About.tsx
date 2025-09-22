@@ -77,7 +77,7 @@ export default function About({ selected }: ConocimientoSelet) {
 
   if (!selected) {
     return (
-      <section className="flex flex-col md:flex-row items-center justify-center gap-8 p-6 md:p-8 bg-gray-100 rounded-2xl shadow-md">
+      <section className="flex flex-col md:flex-row items-center justify-center gap-8 p-6 md:p-8 bg-[var(--card)] rounded-2xl shadow-md">
         {/* Contenedor de imagen con proporciones fijas */}
         <div className="flex-shrink-0 w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-lg mx-auto md:mx-0">
           <Image
@@ -91,8 +91,10 @@ export default function About({ selected }: ConocimientoSelet) {
 
         {/* Descripción */}
         <div className="text-center md:text-left max-w-md">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Sobre mí</h2>
-          <p className="text-gray-600 leading-relaxed">
+          <h2 className="text-3xl font-bold text-[var(--card-foreground)] mb-4">
+            Sobre mí
+          </h2>
+          <p className="text-[var(--card-foreground)] leading-relaxed">
             Hola, soy <span className="font-semibold">Luis Daniel</span>,
             ingeniero de software apasionado por el desarrollo web, la
             inteligencia artificial y la creación de experiencias digitales que
@@ -104,10 +106,10 @@ export default function About({ selected }: ConocimientoSelet) {
   }
 
   return (
-    <section className="min-h-60 max-w-full p-6 md:p-8 bg-gray-100 rounded-2xl shadow-md">
+    <section className="min-h-60 max-w-full p-6 md:p-8 bg-[var(--card)] rounded-2xl shadow-md">
       <h2 className="text-2xl font-bold mb-3">{typedTexts[0]}</h2>
-      <p className="text-gray-600 mb-2">{typedTexts[1]}</p>
-      <p className="text-sm text-gray-700">
+      <p className="text-[var(--card-foreground)] mb-2">{typedTexts[1]}</p>
+      <p className="text-sm text-[var(--card-foreground)]">
         <strong>{typedTexts[2]}</strong> <br />
         <strong>{typedTexts[3]}</strong>
       </p>
@@ -121,7 +123,7 @@ export default function About({ selected }: ConocimientoSelet) {
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                  className="text-[var(--bottom)] hover:text-[var(--border)] transition-colors duration-200"
                 >
                   <ExternalLink size={20} />
                 </a>
