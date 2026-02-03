@@ -44,7 +44,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section id="about" className="section-height bg-background py-20">
+    <section id="about" className="section-height py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-between items-stretch gap-8 w-full">
           {/* Componente About - se desliza desde la izquierda */}

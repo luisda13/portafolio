@@ -25,7 +25,7 @@ export default function ThemeToggle() {
     <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50">
       <button
         onClick={toggleTheme}
-        className="w-10 h-10 flex items-center justify-center bg-[var(--primary)] rounded-xl border-2 shadow-sm cursor-pointer transition-transform duration-300 hover:scale-110"
+        className="w-10 h-10 flex items-center justify-center bg-[var(--primary-foreground)] rounded-xl border-2 shadow-sm cursor-pointer transition-transform duration-300 hover:scale-110"
       >
         {theme === "dark" ? <Moon /> : <Sun />}
       </button>

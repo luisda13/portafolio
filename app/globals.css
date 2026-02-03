@@ -3,7 +3,7 @@
 
 :root {
   /* Paleta de colores para el Modo Claro */
-  --background: #e0e0e0;
+  --background: #bdbdbd;
   --foreground: #333333;
   --primary: #5b3a67;
   --primary-foreground: #ffffff;
@@ -11,22 +11,26 @@
   --secondary-foreground: #333333;
   --card: #ffffff;
   --card-foreground: #333333;
-  --border: #a07ae2;
-  --bottom: #330e74;
+  --border: #b49cdd;
+  --border-inside: #7F057F;
+  --text: #6e4381;
+  --Fondo-intro: #9157aa;
 }
 
 .dark {
   /* Paleta de colores para el Modo Oscuro */
-  --background: #1a1a1a;
+  --background: #2c2929;
   --foreground: #e0e0e0;
   --primary: #311d38; /* Morado claro para mejor contraste */
   --primary-foreground: #1a1a1a;
-  --secondary: #b49cdd;
+  --secondary: #644d8d;
   --secondary-foreground: #1a1a1a;
   --card: #2c2c2c;
   --card-foreground: #e0e0e0;
-  --border: #492d7e;
-  --bottom: #9875d8;
+  --border: #9b7cd4;
+  --border-inside: #FFB5FF;
+  --text: #0D0B0E;
+  --Fondo-intro: #7F057F;
 }
 
 @theme inline {

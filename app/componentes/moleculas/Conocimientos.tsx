@@ -28,11 +28,11 @@ const conocimientos: Conocimiento[] = [
     icon: Code,
     nombre: "Desarrollo",
     nivel: "Avanzado",
-    experiencia: "5 años",
+    experiencia: "3 años",
     descripcion: "Trabajo en frontend, backend y arquitecturas modernas.",
     ejemplos: [
       "https://github.com/luisda13/portafolio/commit/be2a0281ac442d49e271267073fcc2f3c4828c60",
-      "https://github.com/luisda13/portafolio/commit/be2a0281ac442d49e271267073fcc2f3c4828c60",
+      "https://github.com/luisda13/franquicias-api",
       "https://github.com/luisda13/portafolio/commit/be2a0281ac442d49e271267073fcc2f3c4828c60",
     ],
   },
@@ -92,11 +92,10 @@ export default function Conocimientos({ onSelect }: Props) {
   const [selecBoton, setSelecBoton] = useState(-1);
 
   return (
-    <section className="p-8 bg-[var(--card)] rounded-2xl shadow-md w-auto">
+    <section className="p-8 bg-gradient-to-b from-[var(--primary-foreground)] via-[var(--Fondo-intro)] to-[var(--text)] rounded-2xl shadow-md w-auto">
       <h2 className="text-3xl font-bold text-center mb-6">Mis conocimientos</h2>
       <div className="grid grid-cols-4 gap-3 justify-items-center">
         {conocimientos.map((item, index) => (
-          // El padre ahora es el grupo
           <div key={index} className="flex flex-col items-center w-20 group">
             <button
               onClick={() => {
@@ -112,14 +111,15 @@ export default function Conocimientos({ onSelect }: Props) {
               {/* fondo animado */}
               <span className="absolute inset-0 bg-[var(--primary)] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
 
-              {/* contenido encima */}
+              {/* Contenido encima */}
               <item.icon
                 size={24}
                 className="relative text-[var(--card-foreground)] group-hover:text-[var(--primary-foreground)] transition-colors duration-300"
               />
             </button>
-            {/* Texto  */}
-            <span className="relative text-xs text-center text-gray-600 font-medium leading-tight mt-1.5 group-hover:text-blue-600 transition-colors duration-300">
+
+            {/* Texto */}
+            <span className="relative text-xs text-center font-medium leading-tight mt-1.5 group-hover:text-[#8b5cf6] transition-colors duration-300">
               {item.nombre}
             </span>
           </div>
