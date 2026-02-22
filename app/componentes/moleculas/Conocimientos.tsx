@@ -26,10 +26,10 @@ import { Conocimiento, Props } from "@/app/util/typesInterfaces";
 const conocimientos: Conocimiento[] = [
   {
     icon: Code,
-    nombre: "Desarrollo",
+    nombre: "Desarrollo Frontend",
     nivel: "Avanzado",
-    experiencia: "3 años",
-    descripcion: "Trabajo en frontend, backend y arquitecturas modernas.",
+    experiencia: "2-3 años",
+    descripcion: "Especialista en la creación de interfaces dinámicas y responsivas utilizando Angular (v14) y TypeScript. Experto en el desarrollo de formularios dinámicos y pruebas unitarias con Jest.",
     ejemplos: [
       "https://github.com/luisda13/portafolio/commit/be2a0281ac442d49e271267073fcc2f3c4828c60",
       "https://github.com/luisda13/franquicias-api",
@@ -40,24 +40,24 @@ const conocimientos: Conocimiento[] = [
     icon: Database,
     nombre: "Bases de datos",
     nivel: "Intermedio",
-    experiencia: "3 años",
-    descripcion: "SQL y NoSQL con optimización de consultas.",
+    experiencia: "2 años",
+    descripcion: "Gestión y diseño de bases de datos relacionales con SQL Server y MySQL. Optimización de consultas para backend en Node.js y mantenimiento de sistemas legados",
     ejemplos: ["https://github.com/tuusuario/db-example"],
   },
   {
     icon: Cpu,
-    nombre: "Hardware",
-    nivel: "Básico",
-    experiencia: "1 año",
-    descripcion: "Mantenimiento y montaje de hardware.",
+    nombre: "Desarrollo Backend",
+    nivel: "Avanzado",
+    experiencia: "2 año",
+    descripcion: "Construcción de APIs robustas y escalables utilizando Node.js. Experiencia en el mantenimiento de aplicaciones empresariales en PHP 7 y automatización de procesos.",
     ejemplos: [],
   },
   {
     icon: Globe,
-    nombre: "Desarrollo",
-    nivel: "Avanzado",
-    experiencia: "5 años",
-    descripcion: "Trabajo en frontend, backend y arquitecturas modernas.",
+    nombre: "Soluciones Web & CMS",
+    nivel: "Intermedio",
+    experiencia: "1 años",
+    descripcion: "Despliegue y mantenimiento de sitios corporativos mediante WordPress. Implementación de estrategias SEO, optimización de rendimiento y manejo de CRM como Clientify.",
     ejemplos: [
       "https://github.com/luisda13/portafolio/commit/be2a0281ac442d49e271267073fcc2f3c4828c60",
       "https://github.com/luisda13/portafolio/commit/be2a0281ac442d49e271267073fcc2f3c4828c60",
@@ -69,10 +69,10 @@ const conocimientos: Conocimiento[] = [
   },
   {
     icon: Palette,
-    nombre: "Bases de datos",
-    nivel: "Intermedio",
-    experiencia: "3 años",
-    descripcion: "SQL y NoSQL con optimización de consultas.",
+    nombre: "IA Aplicada",
+    nivel: "En formación (Básico/Intermedio)",
+    experiencia: "< 1 año (Estudios actuales)",
+    descripcion: "Actualmente cursando posgrado en IA Aplicada. Conocimientos en implementación de modelos de IA y automatización inteligente de flujos de trabajo.",
     ejemplos: [
       "https://github.com/tuusuario/db-example",
       "https://github.com/luisda13/portafolio/commit/be2a0281ac442d49e271267073fcc2f3c4828c60",
@@ -80,10 +80,10 @@ const conocimientos: Conocimiento[] = [
   },
   {
     icon: Cloud,
-    nombre: "Hardware",
-    nivel: "Básico",
-    experiencia: "1 año",
-    descripcion: "Mantenimiento y montaje de hardware.",
+    nombre: "QA & Testing",
+    nivel: "Intermedio",
+    experiencia: "2 año",
+    descripcion: "Aseguramiento de la calidad de software mediante pruebas unitarias con Jest y automatización de pruebas de interfaz con Selenium.",
     ejemplos: [],
   },
 ];
@@ -109,7 +109,7 @@ export default function Conocimientos({ onSelect }: Props) {
               `}
             >
               {/* fondo animado */}
-              <span className="absolute inset-0 bg-[var(--primary)] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+              <span className="absolute inset-0 bg-[var(--hover)] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
 
               {/* Contenido encima */}
               <item.icon
@@ -119,7 +119,7 @@ export default function Conocimientos({ onSelect }: Props) {
             </button>
 
             {/* Texto */}
-            <span className="relative text-xs text-center font-medium leading-tight mt-1.5 group-hover:text-[#8b5cf6] transition-colors duration-300">
+            <span className="relative text-xs text-center font-medium leading-tight mt-1.5 group-hover:text-[var(--card-foreground)] group-hover:text-[var(--hover)] transition-colors duration-300">
               {item.nombre}
             </span>
           </div>

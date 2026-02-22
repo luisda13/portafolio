@@ -76,11 +76,7 @@ export default function About({ selected }: ConocimientoSelet) {
       } else {
         clearInterval(intervalId);
         setIsAnimating(false);
-
-        const timer = setTimeout(() => {
-          setShowLinks(true);
-        }, 300);
-
+        const timer = setTimeout(() => setShowLinks(true), 300);
         animationRef.current.push(timer);
       }
     };
@@ -92,43 +88,56 @@ export default function About({ selected }: ConocimientoSelet) {
     }, 100);
 
     animationRef.current.push(startTimer);
-
-    return () => {
-      clearAllAnimations();
-    };
+    return () => clearAllAnimations();
   }, [selected]);
 
+  // --- ESTADO INICIAL: SOBRE MÍ (Diseño de la imagen generada) ---
   if (!selected) {
     return (
-      <section className="flex flex-col md:flex-row items-center justify-center gap-8 p-6 md:p-8 bg-[var(--foreground)] rounded-2xl shadow-md">
-        {/* Contenedor de imagen con proporciones fijas */}
-        <div className="flex-shrink-0 w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-lg mx-auto md:mx-0">
+      <section className="relative flex flex-col md:flex-row items-center justify-center gap-8 p-6 md:p-8 bg-black rounded-[2rem] shadow-2xl overflow-hidden group min-h-[250px]">
+        {/* Fondo de Galaxia/Espacio */}
+        <div className="absolute inset-0 z-0">
           <Image
-            src="/imagenes/fotoPerfil.jpg"
-            alt="Foto de perfil"
-            width={192}
-            height={192}
-            className="object-cover w-full h-full"
+            src="/imagenes/fondoAbout.jpg" // Usa tu imagen de fondo aquí
+            alt="Fondo Espacial"
+            fill
+            className="object-cover opacity-60 transition-transform duration-700 group-hover:scale-110"
           />
+          {/* Overlay para asegurar legibilidad */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
         </div>
 
-        {/* Descripción */}
-        <div className="text-center md:text-left max-w-md">
-          <h2 className="text-3xl font-bold text-[var(--primary-foreground)] mb-4">
-            Sobre mí
-          </h2>
+        {/* Contenido (Foto + Texto) */}
+        <div className="flex flex-col md:flex-row items-center gap-8 relative z-10 w-full max-w-4xl">
+          {/* Foto de Perfil con el círculo blanco de la imagen */}
+          <div className="flex-shrink-0 w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white/90 shadow-2xl">
+            <Image
+              src="/imagenes/fotoPerfil.jpg"
+              alt="Luis Daniel"
+              width={192}
+              height={192}
+              className="object-cover w-full h-full"
+            />
+          </div>
 
-          <p className="text-[var(--primary-foreground)] leading-relaxed">
-            Hola, soy <span className="font-semibold">Luis Daniel</span>,
-            ingeniero de software apasionado por el desarrollo web, la
-            inteligencia artificial y la creación de experiencias digitales que
-            conectan con las personas.
-          </p>
+          {/* Texto Descriptivo */}
+          <div className="text-center md:text-left flex-1">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+              Sobre mí
+            </h2>
+            <p className="text-gray-100 text-lg leading-relaxed">
+              Hola, soy <span className="text-white font-bold underline decoration-indigo-500 underline-offset-4">Luis Daniel</span>,
+              ingeniero de software apasionado por el desarrollo web, la
+              inteligencia artificial y la creación de experiencias digitales que
+              conectan con las personas.
+            </p>
+          </div>
         </div>
       </section>
     );
   }
 
+  // --- ESTADO SELECCIONADO: DETALLES TÉCNICOS ---
   return (
     <section className="relative min-h-60 max-w-full p-6 md:p-8 bg-[var(--secondary)] rounded-2xl shadow-md overflow-hidden group">
       {/* CONTENEDOR DE IMAGEN DE FONDO (Ocupa todo el card) */}
@@ -146,7 +155,7 @@ export default function About({ selected }: ConocimientoSelet) {
         />
 
         {/* GRADIENTE: De sólido (izquierda) a transparente (derecha) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--secondary)] via-[var(--secondary)] to-transparent w-full h-full" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--secondary)] via-[var(--secondary)]/60 to-transparent w-full h-full" />
       </div>
 
       {/* CONTENIDO TEXTUAL */}
