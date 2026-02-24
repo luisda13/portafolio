@@ -272,3 +272,35 @@ body {
        opacity: 0;
     }
 }
+
+/*logica de corrucion en el card aboud*/
+
+.corruption-mask {
+  background-color: #7e22ce;
+  background-image:
+    linear-gradient(115deg, transparent 48%, #7f0fe7 49%, #4a0888 51%, transparent 52%),
+    linear-gradient(245deg, transparent 48%, #360e5c 49%, #3d086e 51%, transparent 52%),
+    linear-gradient(5deg, transparent 49%, #4d2d68 50%, transparent 51%),
+    conic-gradient(from 0deg at 0% 0%, transparent 0%, #200e30 5%, transparent 10%),
+    conic-gradient(from 180deg at 100% 100%, transparent 0%, #341c49 5%, transparent 10%);
+
+  mask-image: radial-gradient(circle at center, transparent 25%, black 115%);
+  -webkit-mask-image: radial-gradient(circle at center, transparent 25%, black 115%);
+
+  filter: contrast(180%) brightness(110%);
+  mix-blend-mode: multiply;
+
+  /* La animación ahora es constante */
+  animation: crackleConstant 4s ease-in-out infinite alternate;
+}
+
+@keyframes crackleConstant {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1.03) rotate(0.5deg);
+  }
+}
