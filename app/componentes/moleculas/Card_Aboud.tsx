@@ -6,17 +6,20 @@ const cards = [
   {
     title: "Desarrollo Web",
     description: "Construcción de aplicaciones modernas y responsivas.",
-    image: "/imagenes/paguians.webp",
+    image: "/imagenes/WebCard.jpg",
+    link: "/conocimientos/pageIA"
   },
   {
     title: "Inteligencia Artificial",
     description: "Modelos de IA aplicados a problemas del mundo real.",
-    image: "/imagenes/paguians.webp",
+    image: "/imagenes/IACard.webp",
+    link: "/conocimientos/pageIA"
   },
   {
     title: "Desarrollo de videjuegos",
     description: "Experiencias centradas en el usuario con interfaces limpias.",
-    image: "/imagenes/paguians.webp",
+    image: "/imagenes/VidejeugosCard.jpg",
+    link: "/conocimientos/pageIA"
   },
 ];
 
@@ -37,6 +40,7 @@ export default function AboutCards() {
                 title={card.title}
                 description={card.description}
                 image={card.image}
+                link={card.link}
               />
             ))}
           </div>
