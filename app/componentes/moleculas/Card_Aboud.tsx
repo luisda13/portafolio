@@ -7,18 +7,21 @@ const cards = [
     title: "Desarrollo Web",
     description: "Construcción de aplicaciones modernas y responsivas.",
     image: "/imagenes/WebCard.jpg",
+    info: "Explora mi experiencia detallada en Desarrollo Web, incluyendo proyectos con tecnologías como Angular, Node.jsm Next.js y SQL",
     link: "/conocimientos/pageIA"
   },
   {
     title: "Inteligencia Artificial",
     description: "Modelos de IA aplicados a problemas del mundo real.",
     image: "/imagenes/IACard.webp",
+    info: "Descubre los proyecto que he realizado con IA para la solucion de problemas que existen en la vida real desde la detecion de patrones en imagenes como el analicis de datos y su uso en la IA",
     link: "/conocimientos/pageIA"
   },
   {
     title: "Desarrollo de videjuegos",
-    description: "Experiencias centradas en el usuario con interfaces limpias.",
+    description: "Creador de Videjuegos Amateur apacionado por la creacion y el desarrollo",
     image: "/imagenes/VidejeugosCard.jpg",
+    info: "Mira mi lado mas creativo y apacionado con mi proyecto personal. La creacion de de mi primer viidejuego aqui te mantendre informado de mis nuevos descubrimientos y avances",
     link: "/conocimientos/pageIA"
   },
 ];
@@ -40,6 +43,7 @@ export default function AboutCards() {
                 title={card.title}
                 description={card.description}
                 image={card.image}
+                info={card.info}
                 link={card.link}
               />
             ))}

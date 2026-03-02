@@ -8,10 +8,11 @@ type CardProps = {
   title: string;
   description: string;
   image: string;
+  info: string;
   link?: string; // Nueva prop opcional para la ruta
 };
 
-export default function Card({ title, description, image, link = "/conocimientos" }: CardProps) {
+export default function Card({ title, description, image, info, link = "/conocimientos" }: CardProps) {
   return (
     <div className="group perspective w-full h-80">
       <div
@@ -52,8 +53,7 @@ export default function Card({ title, description, image, link = "/conocimientos
           <div>
             <h3 className="text-xl font-bold mb-3">Detalles Técnicos</h3>
             <p className="text-sm leading-relaxed mb-4">
-              Explora mi experiencia detallada en {title}, incluyendo proyectos con
-              tecnologías como Angular, Node.js y SQL[cite: 11, 42].
+             {info}
             </p>
           </div>
 
