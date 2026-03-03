@@ -102,7 +102,7 @@ export default function Conocimientos({ onSelect }: Props) {
                 onSelect(item);
                 setSelecBoton(index);
               }}
-              className={`relative w-14 h-14 flex items-center justify-center bg-[var(--secondary)] rounded-xl border-2 shadow-sm overflow-hidden 
+              className={`relative w-14 h-14 flex items-center justify-center bg-[var(--secondary)] rounded-xl border-2 shadow-sm overflow-hidden cursor-pointer
                 
                 ${selecBoton == index ? "border-[var(--border)]" : ""} 
 

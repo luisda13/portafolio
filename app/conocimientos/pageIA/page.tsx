@@ -24,8 +24,7 @@ export default function PageIA() {
 
         <section className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
           <p className="text-gray-200 text-lg leading-relaxed">
-            [cite_start]Aquí puedes usar la información de tu hoja de vida[cite: 8, 9].
-            [cite_start]Por ejemplo, detallar tu dominio en Angular 14, Node.js y PHP[cite: 11, 15].
+            Esta paguina esta en contrucion
           </p>
 
           {/* Aquí puedes mapear tus conocimientos reales */}
