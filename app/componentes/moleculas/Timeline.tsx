@@ -12,48 +12,45 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
-  {
-    title: "Desarrollador Frontend",
-    company: "Empresa X",
-    date: "2023 - Actualidad",
+{
+    title: "Desarrollador Full Stack",
+    company: "Proyects & Systems LTDA",
+    date: "Marzo 2022 - Agosto 2023",
     responsibilities: [
-      "Desarrollar interfaces con Next.js y Tailwind",
-      "Optimizar rendimiento de la web",
-      "Colaborar con el equipo de diseño",
+      "Implementación de módulos en frontend (Angular) y backend (Node.js)[cite: 39].",
+      "Desarrollo de formularios dinámicos y pruebas unitarias con Jest.",
+      "Mantenimiento de módulos legacy en PHP 7[cite: 41].",
     ],
     achievements: [
-      "Implementé un sistema de componentes reutilizables",
-      "Reduje tiempos de carga en un 40%",
+      "Gestión eficiente de bases de datos relacionales en SQL[cite: 42].",
+      "Uso experto de Git para colaboración en equipo[cite: 43].",
     ],
   },
   {
-    title: "Ingeniería en Sistemas",
-    company: "Universidad Y",
-    date: "2018 - 2023",
+    title: "Pasante en Desarrollo Web",
+    company: "OVERTENPRO S.A.S",
+    date: "Agosto 2025 - Octubre 2025",
     responsibilities: [
-      "Proyectos de IA y bases de datos",
-      "Prácticas en desarrollo de software",
+      "Mantenimiento de sitios web corporativos para clientes como Afenco y Ecofectiva[cite: 33].",
+      "Implementación de interfaces responsivas con tecnologías modernas[cite: 34].",
     ],
     achievements: [
-      "Graduado con honores",
-      "Participación en proyectos de investigación",
+      "Optimización de rendimiento y posicionamiento SEO[cite: 35].",
     ],
   },
   {
-    title: "Diseñador Web",
-    company: "Freelance",
-    date: "2016 - 2018",
+    title: "Pasante en Transformación Digital",
+    company: "Castor",
+    date: "Abril 2020 - Octubre 2020",
     responsibilities: [
-      "Diseño de sitios web para pequeños negocios",
-      "Optimización SEO básica",
+      "Mantenimiento de sitio web institucional mediante WordPress[cite: 46, 47].",
+      "Manejo de bases de datos con Clientify[cite: 48].",
     ],
     achievements: [
-      "Más de 20 proyectos completados",
-      "Clientes con aumento de tráfico del 50%",
+      "Gestión de contenidos y actualización de estilos en blog corporativo[cite: 46, 47].",
     ],
   },
 ];
-
 export default function Timeline() {
   const [selected, setSelected] = useState<number | null>(null);
   const [highlighted, setHighlighted] = useState<number>(0);
@@ -113,17 +110,36 @@ export default function Timeline() {
       <h2 className="text-3xl font-bold text-center mb-8">Mis experiences</h2>
       <div className="flex flex-col md:flex-row items-center justify-center gap-10">
         {/* Imagen */}
-        <div className="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
-          <Image
-            src="/imagenes/fotoPerfil.jpg"
-            alt="Foto de perfil"
-            fill
-            className="object-cover rounded-2xl shadow-lg"
-          />
+        <div className="flex flex-col items-center gap-6 flex-shrink-0">
+          {/* Imagen Principal */}
+          <div className="relative w-64 h-64 md:w-80 md:h-80">
+            <Image
+              src="/imagenes/fotoPerfil.jpg"
+              alt="Foto de perfil"
+              fill
+              className="object-cover rounded-2xl shadow-xl border-2 border-purple-500/20"
+            />
+          </div>
+
+          {/* Contador de Experiencia (Debajo de la imagen) */}
+          <div className="flex flex-col items-center group">
+            <div className="bg-gradient-to-b from-purple-900/40 to-black/60 backdrop-blur-md border border-purple-500/30 px-8 py-3 rounded-2xl shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 group-hover:border-purple-400 group-hover:shadow-[0_0_25px_rgba(168,85,247,0.3)]">
+              <span className="block text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-300 text-center">
+                {/* Aquí puedes poner el número manual o la variable displayYears */}
+                3.5
+              </span>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-purple-300/80 font-semibold">
+                Años de Trayectoria
+              </span>
+            </div>
+
+            {/* Adorno visual: pequeña línea de conexión opcional */}
+            <div className="w-px h-8 bg-gradient-to-b from-purple-500/50 to-transparent mt-2"></div>
+          </div>
         </div>
 
         {/* Cards con scroll interno */}
-        <div className="flex flex-col gap-4 w-full max-w-xl h-[400px] overflow-y-auto m-4 p-8 rounded-xl bg-gray-50">
+        <div className="flex flex-col gap-4 w-full max-w-xl h-[400px] overflow-y-auto m-4 p-8 bg-gradient-to-b from-[var(--primary-foreground)] via-[var(--Fondo-intro)] to-[var(--text)] rounded-2xl shadow-md w-auto">
           {experiences.map((exp, index) => (
             <div
               key={index}
@@ -133,39 +149,48 @@ export default function Timeline() {
               onClick={() => handleCardClick(index)}
               className={`cursor-pointer rounded-xl p-5 border transition-all duration-500 ease-in-out transform ${
                 selected === index
-                  ? "bg-blue-600 text-white border-blue-400 scale-105 shadow-lg"
+                  ? "bg-[url('/imagenes/espacio.jpg')] bg-cover bg-center text-white border-purple-500/70 scale-105 shadow-2xl before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/65 before:via-black/30 before:to-transparent before:z-0"
                   : highlighted === index && isVisible // solo "respira" si está visible
-                    ? "bg-white text-gray-800 border-blue-400 scale-105 shadow-md"
-                    : "bg-white text-gray-800 border-gray-200 hover:border-blue-400 hover:scale-102"
+                    ? "border-purple-500/70 scale-105 shadow-lg shadow-purple-500/30 before:content-[''] before:absolute before:inset-0 before:z-0 before:bg-[url('https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?w=800')] before:bg-cover before:bg-center before:opacity-25 before:brightness-75 after:content-[''] after:absolute after:inset-0 after:z-0 after:bg-gradient-to-br after:from-purple-600/8 after:via-transparent after:to-purple-900/12"
+                    : "bg-gradient-to-br from-purple-900 via-violet-950 to-black border-2 border-purple-500/30 hover:border-purple-400 hover:scale-[1.02] transition-transform p-6 rounded-lg shadow-2xl"
               }`}
             >
+
               <h3 className="text-xl font-semibold">{exp.title}</h3>
               <p className="text-sm italic">{exp.company}</p>
-              <span className="text-xs text-gray-400">{exp.date}</span>
+              <span className="text-xs text-gray-300">{exp.date}</span>
 
               {/* Contenido expandible */}
               <div
                 className={`overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out ${
-                  selected === index
-                    ? "max-h-96 opacity-100 mt-3"
-                    : "max-h-0 opacity-0"
+                    selected === index
+                      ? "max-h-96 opacity-100 mt-3"
+                      : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="mt-2">
-                  <h4 className="font-semibold">Responsabilidades:</h4>
-                  <ul className="list-disc list-inside text-sm ml-2">
+                  <h4 className="font-bold text-purple-300 text-sm mb-1 uppercase tracking-wider">
+                          Responsabilidades:
+                        </h4>
+                 <ul className="list-disc list-inside text-sm ml-2 text-slate-100 space-y-1">
                     {exp.responsibilities.map((r, i) => (
-                      <li key={i}>{r}</li>
+                      <li key={i} className="text-slate-50 text-[15px] leading-relaxed font-medium">
+                                {r}
+                              </li>
                     ))}
                   </ul>
                 </div>
                 <div className="mt-2">
-                  <h4 className="font-semibold">Logros:</h4>
-                  <ul className="list-disc list-inside text-sm ml-2">
+                 <h4 className="font-bold text-fuchsia-300 text-sm mb-1 uppercase tracking-wider">
+                 Logros:
+                 </h4>
+                  <ul className="list-disc list-inside text-sm ml-2 text-slate-100 space-y-1">
                     {exp.achievements.map((a, i) => (
-                      <li key={i}>{a}</li>
-                    ))}
-                  </ul>
+                        <li key={i} className="text-slate-50 text-[15px] leading-relaxed font-medium">
+                          {a}
+                        </li>
+                       ))}
+                   </ul>
                 </div>
               </div>
             </div>
