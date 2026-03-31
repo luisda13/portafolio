@@ -19,11 +19,11 @@ const experiences: Experience[] = [
     responsibilities: [
       "Implementación de módulos en frontend (Angular) y backend (Node.js)[cite: 39].",
       "Desarrollo de formularios dinámicos y pruebas unitarias con Jest.",
-      "Mantenimiento de módulos legacy en PHP 7[cite: 41].",
+      "Mantenimiento de módulos legacy en PHP 7.",
     ],
     achievements: [
-      "Gestión eficiente de bases de datos relacionales en SQL[cite: 42].",
-      "Uso experto de Git para colaboración en equipo[cite: 43].",
+      "Gestión eficiente de bases de datos relacionales en SQL.",
+      "Uso experto de Git para colaboración en equipo.",
     ],
   },
   {
@@ -31,11 +31,11 @@ const experiences: Experience[] = [
     company: "OVERTENPRO S.A.S",
     date: "Agosto 2025 - Octubre 2025",
     responsibilities: [
-      "Mantenimiento de sitios web corporativos para clientes como Afenco y Ecofectiva[cite: 33].",
-      "Implementación de interfaces responsivas con tecnologías modernas[cite: 34].",
+      "Mantenimiento de sitios web corporativos para clientes como Afenco y Ecofectiva.",
+      "Implementación de interfaces responsivas con tecnologías modernas.",
     ],
     achievements: [
-      "Optimización de rendimiento y posicionamiento SEO[cite: 35].",
+      "Optimización de rendimiento y posicionamiento SEO.",
     ],
   },
   {
@@ -43,11 +43,11 @@ const experiences: Experience[] = [
     company: "Castor",
     date: "Abril 2020 - Octubre 2020",
     responsibilities: [
-      "Mantenimiento de sitio web institucional mediante WordPress[cite: 46, 47].",
+      "Mantenimiento de sitio web institucional mediante WordPress.",
       "Manejo de bases de datos con Clientify[cite: 48].",
     ],
     achievements: [
-      "Gestión de contenidos y actualización de estilos en blog corporativo[cite: 46, 47].",
+      "Gestión de contenidos y actualización de estilos en blog corporativo.",
     ],
   },
 ];
@@ -126,7 +126,7 @@ export default function Timeline() {
             <div className="bg-gradient-to-b from-purple-900/40 to-black/60 backdrop-blur-md border border-purple-500/30 px-8 py-3 rounded-2xl shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 group-hover:border-purple-400 group-hover:shadow-[0_0_25px_rgba(168,85,247,0.3)]">
               <span className="block text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-300 text-center">
                 {/* Aquí puedes poner el número manual o la variable displayYears */}
-                3.5
+                2.1
               </span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-purple-300/80 font-semibold">
                 Años de Trayectoria

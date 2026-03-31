@@ -34,7 +34,7 @@ export default function AboutSection() {
 
   return (
     // "relative" es clave para que los circulos absolutos no se salgan
-<section id="about" className="section-height py-20 relative overflow-hidden section-about-bg">
+<section id="conocimientos" className="section-height py-20 relative overflow-hidden section-about-bg">
 
       {/* --- ESTRELLAS FLOTANTES --- */}
       <ul className="stars">

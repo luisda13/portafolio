@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useLanguage } from "../../util/LanguageContext";
 
 function AboutIndex() {
   const [opacity, setOpacity] = useState(1);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +29,7 @@ function AboutIndex() {
 
   return (
     <div
-      className="h-[600px] bg-fixed bg-center bg-cover scroll-fade"
+      id="home" className="h-[600px] bg-fixed bg-center bg-cover scroll-fade"
       style={{
         backgroundImage: "url(/imagenes/fondo.jpg)",
         opacity: opacity,
@@ -46,7 +48,7 @@ function AboutIndex() {
           />
         </div>
         <h1 className="mt-4 text-4xl font-bold text-white opacity-0 animate-[growFromCenter_1.5s_ease-out_forwards_0.5s]">
-          Ingeniero de software
+          {t.profession}
         </h1>
         <h1 className="mt-4 text-sm font-bold text-white opacity-0 animate-[growFromCenter_1.5s_ease-out_forwards_0.75s]">
           Luis Daniel Martinez Rios
