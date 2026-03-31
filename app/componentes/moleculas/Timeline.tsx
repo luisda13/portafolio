@@ -2,60 +2,18 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { useLanguage } from "@/app/util/LanguageContext";
 
-interface Experience {
-  title: string;
-  company: string;
-  date: string;
-  responsibilities: string[];
-  achievements: string[];
-}
-
-const experiences: Experience[] = [
-{
-    title: "Desarrollador Full Stack",
-    company: "Proyects & Systems LTDA",
-    date: "Marzo 2022 - Agosto 2023",
-    responsibilities: [
-      "Implementación de módulos en frontend (Angular) y backend (Node.js)[cite: 39].",
-      "Desarrollo de formularios dinámicos y pruebas unitarias con Jest.",
-      "Mantenimiento de módulos legacy en PHP 7.",
-    ],
-    achievements: [
-      "Gestión eficiente de bases de datos relacionales en SQL.",
-      "Uso experto de Git para colaboración en equipo.",
-    ],
-  },
-  {
-    title: "Pasante en Desarrollo Web",
-    company: "OVERTENPRO S.A.S",
-    date: "Agosto 2025 - Octubre 2025",
-    responsibilities: [
-      "Mantenimiento de sitios web corporativos para clientes como Afenco y Ecofectiva.",
-      "Implementación de interfaces responsivas con tecnologías modernas.",
-    ],
-    achievements: [
-      "Optimización de rendimiento y posicionamiento SEO.",
-    ],
-  },
-  {
-    title: "Pasante en Transformación Digital",
-    company: "Castor",
-    date: "Abril 2020 - Octubre 2020",
-    responsibilities: [
-      "Mantenimiento de sitio web institucional mediante WordPress.",
-      "Manejo de bases de datos con Clientify[cite: 48].",
-    ],
-    achievements: [
-      "Gestión de contenidos y actualización de estilos en blog corporativo.",
-    ],
-  },
-];
 export default function Timeline() {
+
+  const { t } = useLanguage();
+  const experiences = t.experiences.items;
+
   const [selected, setSelected] = useState<number | null>(null);
   const [highlighted, setHighlighted] = useState<number>(0);
   const [autoScroll, setAutoScroll] = useState<boolean>(true);
   const [isVisible, setIsVisible] = useState<boolean>(false);
+
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -107,7 +65,7 @@ export default function Timeline() {
 
   return (
     <section ref={containerRef} className=" p-10">
-      <h2 className="text-3xl font-bold text-center mb-8">Mis experiences</h2>
+      <h2 className="text-3xl font-bold text-center mb-8">{t.experiences.sectionTitle}</h2>
       <div className="flex flex-col md:flex-row items-center justify-center gap-10">
         {/* Imagen */}
         <div className="flex flex-col items-center gap-6 flex-shrink-0">
@@ -118,6 +76,7 @@ export default function Timeline() {
               alt="Foto de perfil"
               fill
               className="object-cover rounded-2xl shadow-xl border-2 border-purple-500/20"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
 
@@ -129,7 +88,7 @@ export default function Timeline() {
                 2.1
               </span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-purple-300/80 font-semibold">
-                Años de Trayectoria
+                {t.experiences.years}
               </span>
             </div>
 
@@ -142,7 +101,7 @@ export default function Timeline() {
         <div className="flex flex-col gap-4 w-full max-w-xl h-[400px] overflow-y-auto m-4 p-8 bg-gradient-to-b from-[var(--primary-foreground)] via-[var(--Fondo-intro)] to-[var(--text)] rounded-2xl shadow-md w-auto">
           {experiences.map((exp, index) => (
             <div
-              key={index}
+              key={exp.id}
               ref={(el: HTMLDivElement | null) => {
                 cardRefs.current[index] = el;
               }}
@@ -170,7 +129,7 @@ export default function Timeline() {
               >
                 <div className="mt-2">
                   <h4 className="font-bold text-purple-300 text-sm mb-1 uppercase tracking-wider">
-                          Responsabilidades:
+                          {t.experiences.responsibilitie}:
                         </h4>
                  <ul className="list-disc list-inside text-sm ml-2 text-slate-100 space-y-1">
                     {exp.responsibilities.map((r, i) => (
@@ -182,7 +141,7 @@ export default function Timeline() {
                 </div>
                 <div className="mt-2">
                  <h4 className="font-bold text-fuchsia-300 text-sm mb-1 uppercase tracking-wider">
-                 Logros:
+                 {t.experiences.responsibilitie}:
                  </h4>
                   <ul className="list-disc list-inside text-sm ml-2 text-slate-100 space-y-1">
                     {exp.achievements.map((a, i) => (

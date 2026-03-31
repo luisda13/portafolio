@@ -28,7 +28,7 @@ export default function Card({ title, description, image, info, link = "/conocim
           <div className="absolute inset-[-10px] z-0 pointer-events-none opacity-100 corruption-mask"></div>
           <div className="relative z-10 w-full h-full flex flex-col items-center">
             <div className="w-full h-40 relative rounded-lg overflow-hidden border border-purple-200">
-              <Image src={image} alt={title} fill className="object-cover" />
+              <Image src={image} alt={title} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
             </div>
             <div className="p-4 text-center">
               <h3 className="text-slate-800 text-xl font-bold mb-2 group-hover:text-purple-700 transition-colors">

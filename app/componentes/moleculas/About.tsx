@@ -112,6 +112,7 @@ export default function About({ selected }: ConocimientoSelet) {
             alt="Fondo Espacial"
             fill
             className="object-cover opacity-60 transition-transform duration-700 group-hover:scale-110"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
         </div>
@@ -123,6 +124,7 @@ export default function About({ selected }: ConocimientoSelet) {
               width={192}
               height={192}
               className="object-cover w-full h-full"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <div className="text-center md:text-left flex-1">
