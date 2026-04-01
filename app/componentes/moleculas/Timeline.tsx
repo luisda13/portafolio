@@ -132,7 +132,7 @@ export default function Timeline() {
                           {t.experiences.responsibilitie}:
                         </h4>
                  <ul className="list-disc list-inside text-sm ml-2 text-slate-100 space-y-1">
-                    {exp.responsibilities.map((r, i) => (
+                    {exp.responsibilities.map((r: string, i: number) => (
                       <li key={i} className="text-slate-50 text-[15px] leading-relaxed font-medium">
                                 {r}
                               </li>
@@ -141,10 +141,10 @@ export default function Timeline() {
                 </div>
                 <div className="mt-2">
                  <h4 className="font-bold text-fuchsia-300 text-sm mb-1 uppercase tracking-wider">
-                 {t.experiences.responsibilitie}:
+                 {t.experiences.achievement}:
                  </h4>
                   <ul className="list-disc list-inside text-sm ml-2 text-slate-100 space-y-1">
-                    {exp.achievements.map((a, i) => (
+                    {exp.achievements.map((a: string, i: number) => (
                         <li key={i} className="text-slate-50 text-[15px] leading-relaxed font-medium">
                           {a}
                         </li>
