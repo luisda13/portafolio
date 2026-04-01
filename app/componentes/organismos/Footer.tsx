@@ -6,14 +6,14 @@ import Console from "../moleculas/Console";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-200 py-8 mt-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="redes" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-start justify-between gap-8">
           {/* Columna izquierda */}
           <div>
             <h2 className="text-lg font-semibold mb-4">Contáctame</h2>
             <div className="flex space-x-6 mb-4">
               <a
-                href="https://github.com/tuusuario"
+                href="https://github.com/luisda13?tab=repositories"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-300"
@@ -22,25 +22,16 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://linkedin.com/in/tuusuario"
+                href="https://www.linkedin.com/in/luis-daniel-mart%C3%ADnez-r%C3%ADos-239218211/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <Smartphone size={28} />
               </a>
-
-              <a
-                href="https://twitter.com/tuusuario"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-              >
-                <Monitor size={28} />
-              </a>
             </div>
             <p className="text-sm text-gray-500">
-              © {new Date().getFullYear()} Tu Nombre. Todos los derechos
+              © {new Date().getFullYear()} Luis Daniel Martinez Rios. Todos los derechos
               reservados.
             </p>
           </div>
