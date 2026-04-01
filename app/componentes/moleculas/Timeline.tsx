@@ -99,7 +99,7 @@ export default function Timeline() {
 
         {/* Cards con scroll interno */}
         <div className="flex flex-col gap-4 w-full max-w-xl h-[400px] overflow-y-auto m-4 p-8 bg-gradient-to-b from-[var(--primary-foreground)] via-[var(--Fondo-intro)] to-[var(--text)] rounded-2xl shadow-md w-auto">
-          {experiences.map((exp, index) => (
+          {experiences.map((exp: any, index: number) => (
             <div
               key={exp.id}
               ref={(el: HTMLDivElement | null) => {
