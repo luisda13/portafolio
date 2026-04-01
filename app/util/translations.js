@@ -198,7 +198,7 @@ export const translations = {
         examples: ["https://github.com/luisda13/portafolio"]
       },
       {
-        id: 'ai',
+        id: 'ia',
         icon: Palette,
         name: "Applied AI",
         level: "In training (Basic/Intermediate)",

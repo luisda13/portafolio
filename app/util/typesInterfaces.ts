@@ -6,6 +6,7 @@ export interface Conocimiento {
   name: string;
   level: string;
   description: string;
+  experience: string;
   examples: string[];
 }
 

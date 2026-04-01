@@ -4,15 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "../../util/LanguageContext";
-
-interface Conocimiento {
-  id: string;
-  name: string;
-  description: string;
-  level: string;
-  experience: string;
-  examples: string[];
-}
+import { Conocimiento } from "@/app/util/typesInterfaces";
 
 interface ConocimientoSelet {
   selected?: Conocimiento;
